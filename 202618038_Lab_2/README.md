@@ -67,14 +67,6 @@ The dataset contains information about Titanic passengers, including:
 
 The analysis demonstrates several patterns in the Titanic dataset. Survival rates varied considerably by **Sex** and **Passenger Class**, with female and higher-class passengers generally showing higher survival rates. Fare and passenger class also showed meaningful relationships with survival. The dataset contained missing values, particularly in the Age-related data, and Fare included observations identified as outliers using the IQR method.
 
-
-## How to Run
-
-1. Clone or download this repository.
-2. Ensure `train.csv` is available in the required directory.
-3. Open `Titanic_NumPy_Pandas.ipynb` using Jupyter Notebook or JupyterLab.
-4. Run the notebook cells sequentially to reproduce the analysis and visualizations.
-
 ## Conclusion
 
 This assignment provides practical experience with NumPy and Pandas for numerical computing and data wrangling. It demonstrates how vectorized operations, statistical analysis, data filtering, aggregation, feature engineering, missing-value treatment, outlier detection, and visualization can be applied to a real-world dataset.
