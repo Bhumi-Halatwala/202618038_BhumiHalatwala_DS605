@@ -1,33 +1,87 @@
-# NumPy and Pandas Data Wrangling
+# Fundamentals of Machine Learning - Lab Assignment 2
+
+## Student Information
 
 **Name:** Bhumi Halatwala
-
 **Student ID:** 202618038
 
-## Project Overview
+## Assignment Title
 
-This project demonstrates fundamental data manipulation and analysis techniques using **NumPy** and **Pandas**. The assignment is divided into two parts.
-
-**Part A** focuses on vectorized programming with NumPy, including array creation, statistical operations, indexing, slicing, reshaping, vectorized arithmetic, matrix operations, linear algebra, and generating data from a normal distribution.
-
-**Part B** focuses on data wrangling and exploratory analysis using the Kaggle Titanic dataset. The analysis includes data inspection, filtering, grouping, aggregation, missing-value handling, outlier detection, feature engineering, pivot tables, and visualizations.
+**Lab 2 — NumPy and Pandas: Vectorized Programming and Titanic Data Wrangling**
 
 ## Dataset
 
-The project uses the **Kaggle Titanic `train.csv` dataset**.
+**Kaggle Titanic Dataset (`train.csv`)**
 
-The dataset contains information about Titanic passengers, including:
+The Titanic dataset contains passenger information such as passenger class, sex, age, family details, fare, port of embarkation, and survival status.
 
-* Passenger class
-* Sex
-* Age
-* Number of siblings/spouses
-* Number of parents/children
-* Fare
-* Port of embarkation
-* Survival status
+## Project Details
 
-## Technologies Used
+This assignment focuses on applying **NumPy** for vectorized numerical operations and **Pandas** for data wrangling and exploratory analysis.
+
+### Part A — Vectorized Programming with NumPy
+
+The following operations were implemented:
+
+* Random array generation and statistical analysis
+* Array creation using `arange()`, `zeros()`, `ones()`, and `linspace()`
+* 2D and 3D arrays with indexing and slicing
+* Reshaping and flattening arrays
+* Vectorized arithmetic operations
+* Matrix addition, element-wise multiplication, and matrix multiplication
+* Matrix transpose, determinant, and inverse
+* Normal distribution generation and histogram visualization
+
+All numerical operations were performed using vectorized NumPy operations without explicit Python loops.
+
+### Part B — Data Wrangling with Pandas
+
+The Titanic dataset was analyzed using:
+
+* Dataset inspection using `head()`, `tail()`, `shape`, `columns`, `info()`, and `describe()`
+* Row and column selection using `loc` and `iloc`
+* Boolean filtering and querying
+* Grouping and aggregation using `groupby()`
+* Missing-value analysis and imputation
+* Fare outlier detection using the IQR method
+* Feature engineering using `FamilySize` and `IsAlone`
+* Pivot table analysis
+* Correlation analysis and visualization
+* Survival rate analysis by Sex and Passenger Class
+* Age vs Fare visualization based on survival status
+
+A cleaned version of the Titanic dataset and the generated visualizations are included in the repository.
+
+## Key Observations
+
+1. Female passengers had a considerably higher survival rate than male passengers.
+
+2. First-class passengers generally had a higher survival rate than passengers in second and third class.
+
+3. Third-class passengers had the lowest survival rate among the three passenger classes.
+
+4. Passenger class and survival showed a negative relationship, indicating lower survival rates for higher class-number categories.
+
+5. Passengers who survived generally had higher average fares than passengers who did not survive.
+
+6. The Titanic dataset contains missing values, particularly in the `Age` column, which were handled using appropriate imputation techniques.
+
+7. The `Fare` column contains high-value observations that were identified as outliers using the 1.5 × IQR rule.
+
+## Repository Contents
+
+```text
+202618038_Lab_2/
+│
+├── README.md
+├── 202618038_Lab02.ipynb
+├── train.csv
+├── titanic_cleaned.csv
+│
+└── Generated Figures
+```
+
+## Tools and Libraries
 
 * Python
 * NumPy
@@ -35,38 +89,3 @@ The dataset contains information about Titanic passengers, including:
 * Matplotlib
 * Seaborn
 * Jupyter Notebook
-
-## Assignment Tasks
-
-### Part A — Vectorized Programming with NumPy
-
-* Created and analyzed random numerical arrays.
-* Performed statistical calculations including mean, median, minimum, maximum, and standard deviation.
-* Used `zeros()`, `ones()`, `arange()`, and `linspace()`.
-* Created and manipulated 2D and 3D arrays.
-* Applied indexing, slicing, reshaping, and flattening.
-* Performed vectorized arithmetic and matrix operations.
-* Calculated matrix transpose, determinant, and inverse.
-* Verified matrix inversion using `np.allclose()`.
-* Generated normally distributed data and visualized it using a histogram.
-
-### Part B — Titanic Data Wrangling with Pandas
-
-* Loaded and inspected the Titanic dataset.
-* Used `loc` and `iloc` for data selection.
-* Applied Boolean filtering to answer specific passenger-related questions.
-* Calculated survival rates using `groupby()` and aggregation.
-* Analyzed missing values and applied different imputation methods.
-* Detected Fare outliers using the IQR method.
-* Created `FamilySize` and `IsAlone` features.
-* Used pivot tables to compare survival rates across Sex and Pclass.
-* Created correlation and survival visualizations.
-* Analyzed the relationship between Age, Fare, and Survival.
-
-## Key Observations
-
-The analysis demonstrates several patterns in the Titanic dataset. Survival rates varied considerably by **Sex** and **Passenger Class**, with female and higher-class passengers generally showing higher survival rates. Fare and passenger class also showed meaningful relationships with survival. The dataset contained missing values, particularly in the Age-related data, and Fare included observations identified as outliers using the IQR method.
-
-## Conclusion
-
-This assignment provides practical experience with NumPy and Pandas for numerical computing and data wrangling. It demonstrates how vectorized operations, statistical analysis, data filtering, aggregation, feature engineering, missing-value treatment, outlier detection, and visualization can be applied to a real-world dataset.
