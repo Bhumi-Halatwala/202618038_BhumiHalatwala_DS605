@@ -1,12 +1,16 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import os
 
 st.set_page_config(page_title="Airbnb Price Predictor", page_icon="🏙️", layout="centered")
 
 @st.cache_resource
 def load_model():
-    return joblib.load("model_pipeline.pkl")
+    # Build an absolute path next to THIS script — works regardless of CWD
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    model_path = os.path.join(base_dir, "model_pipeline.pkl")
+    return joblib.load(model_path)
 
 model = load_model()
 
