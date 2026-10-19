@@ -1,0 +1,6 @@
+Model,PCA components,CV accuracy (%),Test accuracy (%),Best settings
+Raw-pixel nearest neighbor,0,,96.67,Euclidean distance on raw pixels
+PCA nearest neighbor,91,,96.67,Euclidean distance; k=91 (at least 90% variance)
+Logistic Regression,30,93.93,96.67,"{'model__C': 10, 'pca__n_components': 30}"
+SVM (RBF),30,93.93,96.67,"{'model__C': 10, 'model__gamma': 0.01, 'pca__n_components': 30}"
+KNN,30,92.14,93.33,"{'model__n_neighbors': 1, 'model__p': 1, 'model__weights': 'uniform', 'pca__n_components': 30}"
