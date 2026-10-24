@@ -94,6 +94,7 @@ These results apply to the recorded train-test split and should not be interpret
 |---|---|
 | `202618038_Lab08.ipynb` | Notebook containing the implementations, experiments, visualizations, and model evaluations |
 | `data_banknote_authentication.txt` | Banknote Authentication dataset required to execute the notebook |
+| `VisualizationPlots` | Plots crteated throughout this assignment |
 
 ## Conclusion
 
